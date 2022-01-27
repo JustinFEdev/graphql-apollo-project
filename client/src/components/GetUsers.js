@@ -8,16 +8,16 @@ function GetUsers() {
 
   useEffect(() => {
     // setUsers(data.GetUsers);
-    console.log(users);
+    console.log("data");
+    console.log(data);
   }, [data]);
 
-  return (
-    <div>
-      {/* {users.map((info) => {
-        return <h1>{info.firstName}</h1>;
-      })} */}
-    </div>
-  );
+  return <div></div>;
+  // {
+  //   /* {users.map((info) => {
+  //       return <h1>{info.firstName}</h1>;
+  //     })} */
+  // }
 }
 
 export default GetUsers;

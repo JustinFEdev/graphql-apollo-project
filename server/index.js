@@ -3,14 +3,17 @@ const app = express();
 const PORT = 1688;
 const { graphqlHTTP } = require("express-graphql");
 const schema = require("./Schemas/index");
-
+const cors = require("cors");
+app.use(cors());
 app.use(express.json());
 app.use(
-  "/graphql",
-  graphqlHTTP({
-    schema,
-    graphiql: true,
-  })
+  cors(
+    "/graphql",
+    graphqlHTTP({
+      schema,
+      graphiql: true,
+    })
+  )
 );
 
 app.listen(PORT, () => {
